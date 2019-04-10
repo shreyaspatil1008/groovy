@@ -1,0 +1,58 @@
+<response version-api="2.0">
+    <value>
+        <books>
+            <book available="20" id="1">
+                <title>Don Xijote</title>
+                <author id="1">Manuel De Cervantes</author>
+            </book>
+            <book available="14" id="2">
+                <title>Catcher in the Rye</title>
+               <author id="2">JD Salinger</author>
+           </book>
+           <book available="13" id="3">
+               <title>Alice in Wonderland</title>
+               <author id="3">Lewis Carroll</author>
+           </book>
+           <book available="5" id="4">
+               <title>Don Xijote</title>
+               <author id="4">Manuel De Cervantes</author>
+           </book>
+       </books>
+   </value>
+</response>
+
+<!-- another one --> 
+<?xml version="1.0" ?>
+<bib:bibliography xmlns:bib="http://bibliography.org"
+  xmlns:lit="http://literature.org">
+  <bib:author >William Shakespeare</bib:author>
+  <lit:play>
+    <lit:year>1589</lit:year>
+    <lit:title lang='Eng'>The Two Gentlemen of Verona.</lit:title>
+  </lit:play>
+  <lit:play>
+    <lit:year>1594</lit:year>
+    <lit:title lang='ita'>Love's Labour's Lost.</lit:title>
+  </lit:play>
+  <lit:play>
+    <lit:year>1594</lit:year>
+    <lit:title lang='Eng'>Romeo and Juliet.</lit:title>
+  </lit:play>
+  <lit:play>
+    <lit:year>1595</lit:year>
+    <lit:title lang='esp'>A Midsummer-Nights Dream.</lit:title>
+  </lit:play>
+</bib:bibliography>
+
+<!-- another one --> 
+<response version-api="2.0">
+    <value>
+        <books>
+            <book id="2">
+                <title>Don Xijote</title>
+                <author id="1">Manuel De Cervantes</author>
+            </book>
+        </books>
+    </value>
+</response>
+

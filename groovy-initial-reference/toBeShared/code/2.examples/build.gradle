@@ -1,0 +1,52 @@
+
+apply plugin: 'groovy'
+apply plugin:'application'
+mainClassName = "examples.Main"   //gradle run 
+
+repositories {
+          mavenCentral()	
+          jcenter()
+        }
+
+dependencies {    
+    compile 'org.codehaus.groovy:groovy-all:2.5.0'    
+    //for xls 
+    compile 'builders.dsl:spreadsheet-builder-poi:1.0.5'
+    // for groovy support
+    compile 'builders.dsl:spreadsheet-builder-groovy:1.0.5'	
+    //for GORM 
+    compile "org.grails:grails-datastore-gorm-hibernate5:6.0.11.RELEASE"
+    compile group:'org.grails', name:'grails-web', version:'2.3.11'
+    compile 'org.springframework:spring-context:4.0.0.RELEASE'
+    compile 'com.github.groovy-wslite:groovy-wslite:1.1.2'
+    compile 'io.ratpack:ratpack-groovy:1.5.4'
+    //compile 'org.codehaus.groovy.modules:groovyws:0.5.2'
+    compile 'org.codehaus.gpars:gpars:1.2.1'    
+    compile 'io.github.http-builder-ng:http-builder-ng-core:1.0.3'    
+    compile 'org.jsoup:jsoup:1.9.2'
+    compile group:'org.ccil.cowan.tagsoup', name:'tagsoup', version:'0.9.7'
+    runtime "com.h2database:h2:1.4.192"
+    runtime "org.xerial:sqlite-jdbc:3.7.2"
+    runtime "org.apache.tomcat:tomcat-jdbc:8.5.0"
+    runtime "org.apache.tomcat.embed:tomcat-embed-logging-log4j:8.5.0"
+    runtime "org.slf4j:slf4j-api:1.7.10"
+    runtime group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.7.10'
+    //testing
+	testCompile 'junit:junit:4.10'
+}
+
+//gradle build and gradle -PmainClass=foo runApp
+task runApp(type:JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+    main = project.hasProperty("mainClass") ? project.getProperty("mainClass") : "examples.Main"
+}
+
+// check task list
+// gradle tasks
+// execute as, it runs test as well
+// gradle build
+// gradle -i test  //if test code has any println
+// check test report in build/reports/tests/index.html
+//with java
+//java -cp "build\libs\*;%GROOVY_HOME%\lib\*" support.Person 123
+

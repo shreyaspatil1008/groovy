@@ -1,0 +1,23 @@
+<definitions targetNamespace="http://jsrx/" name="CircleService"><types/>
+<message name="getArea"><part name="arg0" type="xsd:double"/></message>
+<message name="getAreaResponse"><part name="return" type="xsd:double"/></message>
+<message name="getSquare"><part name="arg0" type="xsd:double"/></message>
+<message name="getSquareResponse"><part name="return" type="xsd:double"/></message>
+<portType name="Geom"><operation name="getArea">
+<input wsam:Action="http://jsrx/Geom/getAreaRequest" message="tns:getArea"/>
+<output wsam:Action="http://jsrx/Geom/getAreaResponse" message="tns:getAreaResponse"/>
+</operation><operation name="getSquare">
+<input wsam:Action="http://jsrx/Geom/getSquareRequest" message="tns:getSquare"/>
+<output wsam:Action="http://jsrx/Geom/getSquareResponse" message="tns:getSquareResponse"/>
+</operation></portType><binding name="CirclePortBinding" type="tns:Geom">
+<soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc"/>
+<operation name="getArea"><soap:operation soapAction=""/>
+<input><soap:body use="literal" namespace="http://jsrx/"/>
+</input><output><soap:body use="literal" namespace="http://jsrx/"/>
+</output></operation><operation name="getSquare">
+<soap:operation soapAction=""/><input><soap:body use="literal" namespace="http://jsrx/"/>
+</input><output><soap:body use="literal" namespace="http://jsrx/"/>
+</output></operation></binding><service name="CircleService">
+<port name="CirclePort" binding="tns:CirclePortBinding">
+<soap:address location="http://localhost:5555/circle"/>
+</port></service></definitions>

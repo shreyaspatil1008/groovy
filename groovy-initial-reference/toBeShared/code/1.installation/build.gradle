@@ -1,0 +1,42 @@
+buildscript {   
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath "com.github.jengelman.gradle.plugins:shadow:2.0.4"
+    }
+}
+apply plugin: "com.github.johnrengelman.shadow" //for generating fatjar , use gradle shadowJar
+apply plugin: 'groovy'
+apply plugin:'application'
+mainClassName = "examples.Main"   //gradle run 
+
+repositories {
+          mavenCentral()	
+          jcenter()
+        }
+
+dependencies {    
+    compile 'org.codehaus.groovy:groovy-all:2.4.11'
+
+    testCompile 'org.spockframework:spock-core:1.0-groovy-2.4'
+    //testing
+	testCompile 'junit:junit:4.10'
+}
+
+//gradle build and gradle -PmainClass=foo runApp
+task runApp(type:JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+    main = project.hasProperty("mainClass") ? project.getProperty("mainClass") : "examples.Main"
+}
+
+// check task list
+// gradle tasks
+// execute as, it runs test as well
+// gradle build
+// gradle -i test  //if test code has any println
+// check test report in build/reports/tests/index.html
+//with java
+//java -cp "build\libs\*;%GROOVY_HOME%\lib\*" support.Person 123
+

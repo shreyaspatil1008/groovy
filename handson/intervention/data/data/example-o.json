@@ -1,0 +1,7 @@
+{ "details" :[ {"person":{"name":"John Doe","age":40,"cars":["bmw","ford"]} },
+{"person":{"name":"John Doe","age":42,"cars":["bmw","ford"]} },
+{"person":{"name":"John Doe","age":45,"cars":["bmw","ford"]}  },
+{"person":{"name":"John Doe","age":45,"cars":["honda","toyota"]} },
+{"person":{"name":"John Doe","age":46,"cars":["bmw","ford"]} },
+{"person":{"name":"John Doe","age":47,"cars":["nano","audi"]} }]
+}

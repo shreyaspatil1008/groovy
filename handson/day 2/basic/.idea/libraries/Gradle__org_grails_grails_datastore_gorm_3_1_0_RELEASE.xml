@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.grails:grails-datastore-gorm:3.1.0.RELEASE">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-datastore-gorm/3.1.0.RELEASE/ea807436bcf89464ceeaef655f2941e1433dbddd/grails-datastore-gorm-3.1.0.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-datastore-gorm/3.1.0.RELEASE/70f8cec8c31e7ffb07231135cc71b570cf78a537/grails-datastore-gorm-3.1.0.RELEASE-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

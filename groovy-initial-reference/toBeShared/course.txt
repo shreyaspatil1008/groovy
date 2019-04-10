@@ -1,0 +1,40 @@
+https://github.com/ndas1971/GroovyQs/blob/master/intial-reference.zip
+
+mailid: ndas1971@gmail.com
+----------------------------
+Day-1
+    Difference between Java and Groovy
+    gradle as build tool 
+    Groovy operators
+    Groovy Imperative 
+    Groovy  String, Collections
+    Groovy Object Oriented and AST transformation
+Day-2 
+    Groovy closures
+    Groovy Functional with Collections
+    XML, JSON 
+    CSV, groovy rest client and HTML
+Day-3
+    Groovy Operator overload
+    SAM and Trait
+    Groovy sql 
+    groovy DSL 
+    Groovy with spring and hibernate
+    
+    
+#Installation- JDK8 must be pre-installed and update JAVA_HOME
+Download 
+https://gradle.org/next-steps/?version=4.8&format=bin  => Unzip to c:\Gradle 
+https://dl.bintray.com/groovy/maven/apache-groovy-binary-2.5.0.zip  => Unzip to c:\Groovy 
+
+Update System Path env variable to have below string 
+C:\Gradle\gradle-4.8\bin\;C:\Groovy\groovy-2.5.0\bin\
+Note after updating Path, open a cmd prompt and type 
+$  gradle --version 
+$ groovy --version 
+If above do not work, there is some problem either in PATH setting or PATH value is wrong 
+Find correct location of groovy.exe and groovyConsole.exe from C:\Groovy and C:\Gradle and update the PATH correctly 
+Also install notepad++.exe and/or any IDE as demanded by trg participants 
+
+
+

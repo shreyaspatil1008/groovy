@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.codehaus.gpars:gpars:1.1.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.gpars/gpars/1.1.0/32b489ab3f4e7e5d8282189140591c791917f9cb/gpars-1.1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.gpars/gpars/1.1.0/dda602b46b52eeaba9e5ef9af095f73b10f83640/gpars-1.1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

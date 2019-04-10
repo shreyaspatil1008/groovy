@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="examples.GroovySpec" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-02-27T12:13:14" hostname="didnsrpina6" time="0.128">
+  <properties/>
+  <testcase name="Testing mutating of Person" classname="examples.GroovySpec" time="0.128"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

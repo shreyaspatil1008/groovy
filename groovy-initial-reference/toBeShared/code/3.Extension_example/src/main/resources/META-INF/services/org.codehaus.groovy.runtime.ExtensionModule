@@ -1,0 +1,4 @@
+moduleName = pirate-module
+moduleVersion = 1.0
+extensionClasses = examples.PirateExtension
+staticExtensionClasses = examples.PirateStaticExtension

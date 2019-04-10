@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:lang="http://www.springframework.org/schema/lang"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang-3.0.xsd">
+    <lang:defaults refresh-check-delay="20000"/>
+    
+    <!-- this is the bean definition for the Groovy-backed Messenger implementation -->
+    <!-- switches refreshing on with 5 seconds between checks -->
+    <lang:groovy id="messenger" 
+            refresh-check-delay="5000" 
+            script-source="classpath:Messenger.groovy">
+        <lang:property name="message" value="I Can Do The Frug" />
+    </lang:groovy>
+
+    <!-- an otherwise normal bean that will be injected by the Groovy-backed Messenger -->
+    <bean id="bookingService" class="examples.DefaultBookingService">
+        <property name="messenger" ref="messenger" />
+    </bean>
+    
+    <lang:groovy id="messengerInline">
+    <lang:inline-script>
+        package groovy.refresh
+        import examples.Messenger
+        class GroovyMessengerInline implements Messenger {
+            String message
+        }
+    </lang:inline-script>
+    <lang:property name="message" value="I Can Do The Frug" />
+    </lang:groovy>
+
+    <bean id="bookingService2" class="examples.DefaultBookingService">
+        <property name="messenger" ref="messengerInline" />
+    </bean>
+
+</beans>

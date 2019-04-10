@@ -1,0 +1,58 @@
+buildscript {   
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath "com.github.jengelman.gradle.plugins:shadow:2.0.4"
+    }
+}
+apply plugin: "com.github.johnrengelman.shadow" //for generating fatjar , use gradle shadowJar
+apply plugin: 'groovy'
+apply plugin:'application'
+apply plugin: 'eclipse'
+mainClassName = "examples.Main"   //gradle run 
+
+
+repositories {
+          mavenCentral()		  
+        }
+
+dependencies {
+    // Since Gradle 1.4 we don't use the groovy configuration
+    // to define dependencies. We can simply use the
+    // compile and testCompile configurations.
+    compile 'org.codehaus.groovy:groovy-all:2.4.3'
+
+    testCompile 'org.spockframework:spock-core:1.0-groovy-2.4'
+	
+	testCompile 'junit:junit:4.10'
+}
+
+// check task list
+// gradle tasks
+//gradle -t 
+// execute as
+// gradle build
+//gradle test
+// check test report in build/reports/tests/index.html
+
+// Use below for creation of dir structure
+//$ gradle initProject 
+
+task initProject(description: 'Initialize project directory structure.') << {
+    // Default package to be created in each src dir.
+    def defaultPackage = 'examples'
+    
+    ['java', 'groovy', 'resources'].each {
+        // convention.sourceSets contains the directory structure
+        // for our Groovy project. So we use this struture
+        // and make a directory for each node.
+        convention.sourceSets.all."${it}".srcDirs*.each { dir ->
+            def newDir = new File(dir, defaultPackage)
+            logger.info "Creating directory $newDir"  // gradle -i shows this message.
+            newDir.mkdirs()  // Create dir.
+        }
+    }
+}
+
